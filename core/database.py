@@ -7,7 +7,7 @@ SQLALCHEMY_DATABASE_URL = "postgresql+asyncpg://postgres:masterkey@localhost/fas
 
 engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=True)
 
-SessionLocal = sessionmaker(
+async_session = sessionmaker(
     autocommit=False, autoflush=False, bind=engine,
     class_=AsyncSession,
     expire_on_commit=False

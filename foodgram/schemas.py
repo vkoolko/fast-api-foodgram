@@ -7,4 +7,7 @@ class IngredientBase(BaseModel):
 
     class Config:
         orm_mode = True
-        
+
+
+class IngredientCreate(IngredientBase):
+    id: int
